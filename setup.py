@@ -42,37 +42,23 @@ for arg in sys.argv:
         filtered_args.append(arg)
 sys.argv = filtered_args
 
-def data_files_config(target, source, pattern):
-    ret = list()
-    ret.append((target, glob.glob(os.path.join(source,pattern))))
-    dirs = [x for x in glob.iglob(os.path.join( source, '*')) if os.path.isdir(x) ]
-    for d in dirs:
-        rd = d.replace(source+os.sep, "", 1)
-        ret.extend(data_files_config(os.path.join(target,rd), os.path.join(source,rd), pattern))
-    return ret
+def data_files_config(res, rsrc, src, pattern):
+    for root, dirs, fils in os.walk(src):
+        if src == root:
+            sub = []
+            for fil in fils:
+                sub.append(os.path.join(root,fil))
+            res.append((rsrc, sub))
+            for dire in dirs:
+                    data_files_config(res, os.path.join(rsrc, dire), os.path.join(root, dire), pattern)
 
-data_files = data_files_config('docs','src/docs','*.rst')
-data_files.extend(data_files_config('docs','src/docs','*.md'))
-data_files.extend(data_files_config('docs','src/docs','*.txt'))
-data_files.extend(data_files_config('docs','src/docs','*.png'))
-data_files.extend(data_files_config('docs','src/docs','*.jpg'))
-data_files.extend(data_files_config('docs','src/docs','*.gif'))
-
-#You must define a variable like the one below.
-#It will be used to collect entries without installing the package
-janitoo_entry_points = {
-    "janitoo.components": [
-        "events.cron = janitoo_events.component:make_component",
-    ],
-    "janitoo.threads": [
-        "events = janitoo_events.thread:make_thread",
-    ],
-}
+data_files = []
+data_files_config(data_files, 'docs','src/docs/','*')
 
 setup(
     name = 'janitoo_events',
-    description = "Cron based events components",
-    long_description = "Cron based events components",
+    description = "Events components",
+    long_description = "Events components",
     author='Sébastien GALLET aka bibi2100 <bibi21000@gmail.com>',
     author_email='bibi21000@gmail.com',
     license = """
@@ -94,14 +80,25 @@ setup(
     url='http://bibi21000.gallet.info/',
     version = janitoo_version,
     zip_safe = False,
-    keywords = "cron",
+    keywords = "cron,events,dawn,dusk",
     packages = find_packages('src', exclude=["scripts", "docs", "config"]),
     include_package_data=True,
     data_files = data_files,
     package_dir = { '': 'src' },
     install_requires=[
-                     'janitoo_admin >= %s'%"0.0.6",
-                     'APScheduler == 3.0.3',
+                     'janitoo',
+                     'janitoo_factory',
                     ],
-    entry_points = janitoo_entry_points,
+    entry_points = {
+        "janitoo.components": [
+            "events.biocycle = janitoo_events.component:make_biocycle",
+        ],
+        "janitoo.threads": [
+            "events = janitoo_events.thread:make_thread",
+        ],
+    },
+    dependency_links = [
+      'https://github.com/bibi21000/janitoo/archive/master.zip#egg=janitoo',
+      'https://github.com/bibi21000/janitoo_factory/archive/master.zip#egg=janitoo_factory',
+    ],
 )

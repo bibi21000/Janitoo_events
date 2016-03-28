@@ -50,8 +50,8 @@ COMMAND_DISCOVERY = 0x5000
 assert(COMMAND_DESC[COMMAND_DISCOVERY] == 'COMMAND_DISCOVERY')
 ##############################################################
 
-class TestEventsCron(JNTTComponent, JNTTComponentCommon):
-    """Test the events.cron component
+class TestEventsBiocycle(JNTTComponent, JNTTComponentCommon):
+    """Test the events.biocycle component
     """
-    component_name = 'events.cron'
+    component_name = 'events.biocycle'
 

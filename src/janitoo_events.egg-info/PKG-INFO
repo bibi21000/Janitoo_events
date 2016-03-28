@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
 Name: janitoo-events
 Version: 0.0.6
-Summary: Cron based events components
+Summary: Events components
 Home-page: http://bibi21000.gallet.info/
 Author: Sébastien GALLET aka bibi2100 <bibi21000@gmail.com>
 Author-email: bibi21000@gmail.com
@@ -21,6 +21,6 @@ License:
         You should have received a copy of the GNU General Public License
         along with Janitoo. If not, see <http://www.gnu.org/licenses/>.
     
-Description: Cron based events components
-Keywords: cron
+Description: Events components
+Keywords: cron,events,dawn,dusk
 Platform: UNKNOWN

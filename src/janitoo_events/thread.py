@@ -27,7 +27,7 @@ __copyright__ = "Copyright © 2013-2014-2015 Sébastien GALLET aka bibi21000"
 
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
-logger = logging.getLogger("janitoo.events")
+logger = logging.getLogger(__name__)
 import os
 import time
 from random import randint
@@ -56,8 +56,10 @@ assert(COMMAND_DESC[COMMAND_EVENT_CONTROLLER_CONF] == 'COMMAND_EVENT_CONTROLLER_
 assert(COMMAND_DESC[COMMAND_CONFIGURATION] == 'COMMAND_CONFIGURATION')
 ##############################################################
 
+OID = 'events'
+
 def make_thread(options):
-    if get_option_autostart(options, 'events') == True:
+    if get_option_autostart(options, OID) == True:
         return EventsThread(options)
     else:
         return None
@@ -69,7 +71,7 @@ class EventsThread(JNTBusThread):
     def init_bus(self):
         """Build the bus
         """
-        self.section = 'events'
+        self.section = OID
         self.bus = EventsBus(options=self.options, oid=self.section, name='Event Manager bus', product_name="Event controller", product_type="Core thread")
 
 class EventsBus(JNTBus):

@@ -2,5 +2,5 @@
 events = janitoo_events.thread:make_thread
 
 [janitoo.components]
-events.cron = janitoo_events.component:make_component
+events.biocycle = janitoo_events.component:make_biocycle
 
