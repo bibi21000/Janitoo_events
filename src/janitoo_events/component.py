@@ -28,12 +28,17 @@ __copyright__ = "Copyright © 2013-2014-2015 Sébastien GALLET aka bibi21000"
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
 logger = logging.getLogger(__name__)
+
+import os
+import time
+import datetime
+
 from janitoo.bus import JNTBus
 from janitoo.value import JNTValue, value_config_poll
 from janitoo.node import JNTNode
 from janitoo.component import JNTComponent
-import os
-import time
+
+from janitoo_events.thread import OID
 
 ##############################################################
 #Check that we are in sync with the official command classes
@@ -56,7 +61,7 @@ class BiocycleComponent(JNTComponent):
     def __init__(self, bus=None, addr=None, **kwargs):
         """
         """
-        oid = kwargs.pop('oid', 'fishtank.biocycle')
+        oid = kwargs.pop('oid', '%s.biocycle'%OID)
         name = kwargs.pop('name', "Bio cycle")
         product_name = kwargs.pop('product_name', "Bio cycle simulator")
         JNTComponent.__init__(self, oid=oid, bus=bus, addr=addr, name=name, hearbeat=60,
