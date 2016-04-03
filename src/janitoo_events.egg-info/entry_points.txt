@@ -1,6 +1,6 @@
-[janitoo.components]
-events.biocycle = janitoo_events.component:make_biocycle
-
 [janitoo.threads]
 events = janitoo_events.thread:make_thread
+
+[janitoo.components]
+events.biocycle = janitoo_events.component:make_biocycle
 
