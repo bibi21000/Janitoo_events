@@ -1,6 +1,7 @@
 README.rst
 setup.py
 src/janitoo_events/__init__.py
+src/janitoo_events/bus.py
 src/janitoo_events/component.py
 src/janitoo_events/thread.py
 src/janitoo_events.egg-info/PKG-INFO
