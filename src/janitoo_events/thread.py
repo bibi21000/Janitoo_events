@@ -35,7 +35,6 @@ from janitoo.bus import JNTBus
 from janitoo.thread import JNTBusThread
 from janitoo.value import JNTValue
 from janitoo.options import get_option_autostart
-from janitoo_events.bus import EventsBus
 
 ##############################################################
 #Check that we are in sync with the official command classes
@@ -73,4 +72,5 @@ class EventsThread(JNTBusThread):
         """Build the bus
         """
         self.section = OID
+        from janitoo_events.bus import EventsBus
         self.bus = EventsBus(options=self.options, oid=self.section, name='Event Manager bus', product_name="Event controller", product_type="Core thread")
