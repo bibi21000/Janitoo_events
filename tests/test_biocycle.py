@@ -54,7 +54,7 @@ from janitoo.options import JNTOptions
 from janitoo.runner import jnt_parse_args
 
 from janitoo_events.component import BiocycleComponent
-from janitoo_events.thread import EventsBus
+from janitoo_events.bus import EventsBus
 
 ##############################################################
 #Check that we are in sync with the official command classes
