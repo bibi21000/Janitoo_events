@@ -36,7 +36,7 @@ from janitoo.thread import JNTBusThread
 from janitoo.value import JNTValue
 from janitoo.options import get_option_autostart
 
-from janitoo_raspberry_events.thread import OID
+from janitoo_events.thread import OID
 
 ##############################################################
 #Check that we are in sync with the official command classes
