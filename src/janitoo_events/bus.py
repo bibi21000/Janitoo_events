@@ -36,6 +36,8 @@ from janitoo.thread import JNTBusThread
 from janitoo.value import JNTValue
 from janitoo.options import get_option_autostart
 
+from janitoo_raspberry_events.thread import OID
+
 ##############################################################
 #Check that we are in sync with the official command classes
 #Must be implemented for non-regression
@@ -59,12 +61,12 @@ assert(COMMAND_DESC[COMMAND_CONFIGURATION] == 'COMMAND_CONFIGURATION')
 class EventsBus(JNTBus):
     """A pseudo-bus to manage all events
     """
-    def __init__(self, manager_id=None, **kwargs):
+    def __init__(self, oid=OID, manager_id=None, **kwargs):
         """
         :param int manager_id: the id of the manager
         :param kwargs: parameters
         """
-        JNTBus.__init__(self, **kwargs)
+        JNTBus.__init__(self, oid=oid, **kwargs)
         if manager_id == None:
             self.manager_id = randint(0,9999)
         else:
