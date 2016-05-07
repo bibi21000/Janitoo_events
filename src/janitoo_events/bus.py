@@ -73,7 +73,7 @@ class EventsBus(JNTBus):
             self.manager_id = manager_id
         for cls in [COMMAND_EVENT_CONTROLLER_CONF, COMMAND_EVENT_ACTUATOR_CONF, COMMAND_CONFIGURATION]:
             self.cmd_classes.append(cls)
-        uuid = 'manager_id'
+        uuid = '%s_manager_id'%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='The id of the event manager',
                     label='%s' % uuid,
@@ -87,7 +87,7 @@ class EventsBus(JNTBus):
                     is_readonly=False,
                     default=1,
                     )
-        uuid = "add_event"
+        uuid = "%s_add_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Add the event',
                     label='%s' % uuid,
@@ -100,7 +100,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "remove_event"
+        uuid = "%s_remove_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Remove the event',
                     label='%s' % uuid,
@@ -113,7 +113,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "get_num_events"
+        uuid = "%s_get_num_events"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Get the number of events',
                     label='%s' % uuid,
@@ -126,7 +126,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "get_event"
+        uuid = "%s_get_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Get all the values in a event',
                     label='%s' % uuid,
@@ -139,7 +139,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "add_value_to_event"
+        uuid = "%s_add_value_to_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Add a value to a event',
                     label='%s' % uuid,
@@ -152,7 +152,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "set_value_in_event"
+        uuid = "%s_set_value_in_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Set a value in a event',
                     label='%s' % uuid,
@@ -165,7 +165,7 @@ class EventsBus(JNTBus):
                     is_writeonly=True,
                     node_uuid=self.uuid,
                     )
-        uuid = "remove_value_from_event"
+        uuid = "%s_remove_value_from_event"%OID
         self.values[uuid] = JNTValue( uuid=uuid,
                     help='Remove a value from a event',
                     label='%s' % uuid,
@@ -186,7 +186,7 @@ class EventsBus(JNTBus):
         """
         try:
             self.manager_id = data
-            self.options.set_option(self.node.uuid, 'manager_id', self.manager_id)
+            self.options.set_option(self.node.uuid, '%s_manager_id'%OID, self.manager_id)
             if self._trigger_thread_reload_cb is not None:
                 self._trigger_thread_reload_cb(self.node.config_timeout)
         except:
@@ -196,7 +196,7 @@ class EventsBus(JNTBus):
         """
         """
         try:
-            self.manager_id =self.options.get_option(self.node.uuid, 'manager_id')
+            self.manager_id =self.options.get_option(self.node.uuid, '%s_manager_id'%OID)
             return self.manager_id
         except:
             logger.exception('Exception when retrieving config manager_id')
