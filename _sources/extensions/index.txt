@@ -1,0 +1,18 @@
+janitoo_events package
+======================
+
+Show janitoo's extensions.
+
+Core extensions
+---------------
+
+Threads
+^^^^^^^
+
+ - events (janitoo_events.thread:make_thread)
+
+Components
+^^^^^^^^^^
+
+ - events.biocycle (janitoo_events.component:make_biocycle)
+
