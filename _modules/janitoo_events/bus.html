@@ -298,7 +298,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">_manager_id&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager_id</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trigger_thread_reload_cb</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_trigger_thread_reload_cb</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">config_timeout</span><span class="p">)</span>
-        <span class="k">except</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;Exception when writing config manager_id&#39;</span><span class="p">)</span>
 </div>
 <div class="viewcode-block" id="EventsBus.get_config_manager_id"><a class="viewcode-back" href="../../api/index.html#janitoo_events.bus.EventsBus.get_config_manager_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_config_manager_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
@@ -307,7 +307,7 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">manager_id</span> <span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">_manager_id&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">)</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager_id</span>
-        <span class="k">except</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;Exception when retrieving config manager_id&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">None</span>
 </div>
