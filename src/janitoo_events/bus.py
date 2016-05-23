@@ -189,7 +189,7 @@ class EventsBus(JNTBus):
             self.options.set_option(self.node.uuid, '%s_manager_id'%OID, self.manager_id)
             if self._trigger_thread_reload_cb is not None:
                 self._trigger_thread_reload_cb(self.node.config_timeout)
-        except:
+        except Exception:
             logger.exception('Exception when writing config manager_id')
 
     def get_config_manager_id(self, node_uuid, index):
@@ -198,7 +198,7 @@ class EventsBus(JNTBus):
         try:
             self.manager_id =self.options.get_option(self.node.uuid, '%s_manager_id'%OID)
             return self.manager_id
-        except:
+        except Exception:
             logger.exception('Exception when retrieving config manager_id')
         return None
 
