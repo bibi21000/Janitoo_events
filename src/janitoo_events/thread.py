@@ -56,7 +56,7 @@ assert(COMMAND_DESC[COMMAND_EVENT_CONTROLLER_CONF] == 'COMMAND_EVENT_CONTROLLER_
 assert(COMMAND_DESC[COMMAND_CONFIGURATION] == 'COMMAND_CONFIGURATION')
 ##############################################################
 
-OID = 'events'
+from janitoo_events import OID
 
 def make_thread(options, force=False):
     if get_option_autostart(options, OID) == True or force:

@@ -36,8 +36,6 @@ from janitoo.thread import JNTBusThread
 from janitoo.value import JNTValue
 from janitoo.options import get_option_autostart
 
-from janitoo_events.thread import OID
-
 ##############################################################
 #Check that we are in sync with the official command classes
 #Must be implemented for non-regression
@@ -57,6 +55,8 @@ assert(COMMAND_DESC[COMMAND_EVENT_ACTUATOR_CONF] == 'COMMAND_EVENT_ACTUATOR_CONF
 assert(COMMAND_DESC[COMMAND_EVENT_CONTROLLER_CONF] == 'COMMAND_EVENT_CONTROLLER_CONF')
 assert(COMMAND_DESC[COMMAND_CONFIGURATION] == 'COMMAND_CONFIGURATION')
 ##############################################################
+
+from janitoo_events import OID
 
 class EventsBus(JNTBus):
     """A pseudo-bus to manage all events

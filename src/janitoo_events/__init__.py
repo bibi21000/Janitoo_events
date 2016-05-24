@@ -27,3 +27,5 @@ except Exception:  # pragma: no cover
     # bootstrapping
     pass # pragma: no cover
 
+OID = 'events'
+
