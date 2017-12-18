@@ -1,5 +1,8 @@
 README.rst
 setup.py
+src/docs/index_development.rst
+src/docs/index_installation.rst
+src/docs/index_utilization.rst
 src/janitoo_events/__init__.py
 src/janitoo_events/bus.py
 src/janitoo_events/component.py
