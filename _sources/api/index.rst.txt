@@ -1,0 +1,38 @@
+janitoo_events package
+======================
+
+Submodules
+----------
+
+janitoo_events.bus module
+-------------------------
+
+.. automodule:: janitoo_events.bus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+janitoo_events.component module
+-------------------------------
+
+.. automodule:: janitoo_events.component
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+janitoo_events.thread module
+----------------------------
+
+.. automodule:: janitoo_events.thread
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: janitoo_events
+    :members:
+    :undoc-members:
+    :show-inheritance:

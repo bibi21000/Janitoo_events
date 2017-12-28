@@ -5,13 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>janitoo_events package &mdash; janitoo_events 0.0.6 documentation</title>
+    <title>janitoo_events package &#8212; janitoo_events 0.0.6 documentation</title>
     
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -19,7 +17,8 @@
         VERSION:     '0.0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -30,16 +29,17 @@
     <script type="text/javascript" src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="janitoo_events 0.0.6 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -119,58 +119,58 @@
 It handle all communications to the onewire bus</p>
 <dl class="class">
 <dt id="janitoo_events.bus.EventsBus">
-<em class="property">class </em><tt class="descclassname">janitoo_events.bus.</tt><tt class="descname">EventsBus</tt><big>(</big><em>manager_id=None</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.bus.JNTBus</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_events.bus.</code><code class="descname">EventsBus</code><span class="sig-paren">(</span><em>manager_id=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.bus.JNTBus</span></code></p>
 <p>A pseudo-bus to manage all events</p>
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.add_event">
-<tt class="descname">add_event</tt><big>(</big><em>name</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.add_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.add_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_event</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.add_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.add_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a event with name. Also have an uuid (index) on the controller</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.add_value_to_event">
-<tt class="descname">add_value_to_event</tt><big>(</big><em>index</em>, <em>hadd</em>, <em>value_uuid</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.add_value_to_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.add_value_to_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_value_to_event</code><span class="sig-paren">(</span><em>index</em>, <em>hadd</em>, <em>value_uuid</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.add_value_to_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.add_value_to_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a value to an existing event.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.get_config_manager_id">
-<tt class="descname">get_config_manager_id</tt><big>(</big><em>node_uuid</em>, <em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_config_manager_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_config_manager_id" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_config_manager_id</code><span class="sig-paren">(</span><em>node_uuid</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_config_manager_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_config_manager_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.get_event">
-<tt class="descname">get_event</tt><big>(</big><em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_event</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all the values attached to the event</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.get_num_events">
-<tt class="descname">get_num_events</tt><big>(</big><em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_num_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_num_events" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_num_events</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.get_num_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.get_num_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of event in the controller</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.remove_event">
-<tt class="descname">remove_event</tt><big>(</big><em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.remove_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.remove_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove_event</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.remove_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.remove_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the event at index</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.remove_value_from_event">
-<tt class="descname">remove_value_from_event</tt><big>(</big><em>index</em>, <em>hadd</em>, <em>value_uuid</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.remove_value_from_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.remove_value_from_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove_value_from_event</code><span class="sig-paren">(</span><em>index</em>, <em>hadd</em>, <em>value_uuid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.remove_value_from_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.remove_value_from_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a value from a event</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.set_config_manager_id">
-<tt class="descname">set_config_manager_id</tt><big>(</big><em>node_uuid</em>, <em>index</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.set_config_manager_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.set_config_manager_id" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_config_manager_id</code><span class="sig-paren">(</span><em>node_uuid</em>, <em>index</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.set_config_manager_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.set_config_manager_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.bus.EventsBus.set_value_in_event">
-<tt class="descname">set_value_in_event</tt><big>(</big><em>index</em>, <em>hadd</em>, <em>value_uuid</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.set_value_in_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.set_value_in_event" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_value_in_event</code><span class="sig-paren">(</span><em>index</em>, <em>hadd</em>, <em>value_uuid</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/bus.html#EventsBus.set_value_in_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.bus.EventsBus.set_value_in_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a value in an existing event.</p>
 </dd></dl>
 
@@ -183,72 +183,72 @@ It handle all communications to the onewire bus</p>
 It handle all communications to the onewire bus</p>
 <dl class="class">
 <dt id="janitoo_events.component.BiocycleComponent">
-<em class="property">class </em><tt class="descclassname">janitoo_events.component.</tt><tt class="descname">BiocycleComponent</tt><big>(</big><em>bus=None</em>, <em>addr=None</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.component.JNTComponent</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_events.component.</code><code class="descname">BiocycleComponent</code><span class="sig-paren">(</span><em>bus=None</em>, <em>addr=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.component.JNTComponent</span></code></p>
 <p>A &#8216;bio&#8217; cyclecomponent</p>
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.check_heartbeat">
-<tt class="descname">check_heartbeat</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.check_heartbeat" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_heartbeat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.check_heartbeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check that the component is &#8216;available&#8217;</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.current_rotate">
-<tt class="descname">current_rotate</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.current_rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.current_rotate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">current_rotate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.current_rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.current_rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotate the current day to go ahead in the cycle</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.duration">
-<tt class="descname">duration</tt><big>(</big><em>node_uuid</em>, <em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.duration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.duration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">duration</code><span class="sig-paren">(</span><em>node_uuid</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.duration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the cycle duration in the day</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.factor_day">
-<tt class="descname">factor_day</tt><big>(</big><em>node_uuid</em>, <em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.factor_day"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.factor_day" title="Permalink to this definition">¶</a></dt>
+<code class="descname">factor_day</code><span class="sig-paren">(</span><em>node_uuid</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.factor_day"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.factor_day" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the day factor</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.factor_now">
-<tt class="descname">factor_now</tt><big>(</big><em>node_uuid</em>, <em>index</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.factor_now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.factor_now" title="Permalink to this definition">¶</a></dt>
+<code class="descname">factor_now</code><span class="sig-paren">(</span><em>node_uuid</em>, <em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.factor_now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.factor_now" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the instant factor</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.get_cycle_duration">
-<tt class="descname">get_cycle_duration</tt><big>(</big><em>index=0</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_cycle_duration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_cycle_duration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_cycle_duration</code><span class="sig-paren">(</span><em>index=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_cycle_duration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_cycle_duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the duration in minutes of the cycle for today</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.get_cycle_factor">
-<tt class="descname">get_cycle_factor</tt><big>(</big><em>index=0</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_cycle_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_cycle_factor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_cycle_factor</code><span class="sig-paren">(</span><em>index=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_cycle_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_cycle_factor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the factor related to day cycle</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.get_hour_factor">
-<tt class="descname">get_hour_factor</tt><big>(</big><em>index=0</em>, <em>nnow=None</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_hour_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_hour_factor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_hour_factor</code><span class="sig-paren">(</span><em>index=0</em>, <em>nnow=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_hour_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_hour_factor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the factor</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.get_status">
-<tt class="descname">get_status</tt><big>(</big><em>index=0</em>, <em>nnow=None</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_status" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_status</code><span class="sig-paren">(</span><em>index=0</em>, <em>nnow=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.get_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.get_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current status</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.start">
-<tt class="descname">start</tt><big>(</big><em>mqttc</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.start" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start</code><span class="sig-paren">(</span><em>mqttc</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the component. Can be used to start a thread to acquire data.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_events.component.BiocycleComponent.stop">
-<tt class="descname">stop</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#BiocycleComponent.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.BiocycleComponent.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the component.</p>
 </dd></dl>
 
@@ -256,7 +256,7 @@ It handle all communications to the onewire bus</p>
 
 <dl class="function">
 <dt id="janitoo_events.component.make_biocycle">
-<tt class="descclassname">janitoo_events.component.</tt><tt class="descname">make_biocycle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/component.html#make_biocycle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.make_biocycle" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">janitoo_events.component.</code><code class="descname">make_biocycle</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/component.html#make_biocycle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.component.make_biocycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -266,12 +266,12 @@ It handle all communications to the onewire bus</p>
 It handle all communications to the onewire bus</p>
 <dl class="class">
 <dt id="janitoo_events.thread.EventsThread">
-<em class="property">class </em><tt class="descclassname">janitoo_events.thread.</tt><tt class="descname">EventsThread</tt><big>(</big><em>options=None</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/thread.html#EventsThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.EventsThread" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.thread.JNTBusThread</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_events.thread.</code><code class="descname">EventsThread</code><span class="sig-paren">(</span><em>options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/thread.html#EventsThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.EventsThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.thread.JNTBusThread</span></code></p>
 <p>The Hardware thread</p>
 <dl class="method">
 <dt id="janitoo_events.thread.EventsThread.init_bus">
-<tt class="descname">init_bus</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_events/thread.html#EventsThread.init_bus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.EventsThread.init_bus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">init_bus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/thread.html#EventsThread.init_bus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.EventsThread.init_bus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build the bus</p>
 </dd></dl>
 
@@ -279,7 +279,7 @@ It handle all communications to the onewire bus</p>
 
 <dl class="function">
 <dt id="janitoo_events.thread.make_thread">
-<tt class="descclassname">janitoo_events.thread.</tt><tt class="descname">make_thread</tt><big>(</big><em>options</em>, <em>force=False</em><big>)</big><a class="reference internal" href="../_modules/janitoo_events/thread.html#make_thread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.make_thread" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">janitoo_events.thread.</code><code class="descname">make_thread</code><span class="sig-paren">(</span><em>options</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_events/thread.html#make_thread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_events.thread.make_thread" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -301,7 +301,7 @@ It handle all communications to the onewire bus</p>
     </p>
     <p>
         &copy; Copyright 2014,2015,2016 Sébastien GALLET aka bibi2100 &lt;bibi21000@gmail.com&gt;.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.<br/>
     </p>
   </div>
 </footer>

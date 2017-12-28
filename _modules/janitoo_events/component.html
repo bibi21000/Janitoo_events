@@ -5,13 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>janitoo_events.component &mdash; janitoo_events 0.0.6 documentation</title>
+    <title>janitoo_events.component &#8212; janitoo_events 0.0.6 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -19,7 +17,8 @@
         VERSION:     '0.0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -30,17 +29,17 @@
     <script type="text/javascript" src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="janitoo_events 0.0.6 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -110,143 +109,143 @@
     <div class="col-md-12 content">
       
   <h1>Source code for janitoo_events.component</h1><div class="highlight"><pre>
-<span class="c"># -*- coding: utf-8 -*-</span>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;The 1-wire Bus</span>
 <span class="sd">It handle all communications to the onewire bus</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">__license__</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="s">    This file is part of Janitoo.</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    This file is part of Janitoo.</span>
 
-<span class="s">    Janitoo is free software: you can redistribute it and/or modify</span>
-<span class="s">    it under the terms of the GNU General Public License as published by</span>
-<span class="s">    the Free Software Foundation, either version 3 of the License, or</span>
-<span class="s">    (at your option) any later version.</span>
+<span class="s2">    Janitoo is free software: you can redistribute it and/or modify</span>
+<span class="s2">    it under the terms of the GNU General Public License as published by</span>
+<span class="s2">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="s2">    (at your option) any later version.</span>
 
-<span class="s">    Janitoo is distributed in the hope that it will be useful,</span>
-<span class="s">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-<span class="s">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-<span class="s">    GNU General Public License for more details.</span>
+<span class="s2">    Janitoo is distributed in the hope that it will be useful,</span>
+<span class="s2">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="s2">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="s2">    GNU General Public License for more details.</span>
 
-<span class="s">    You should have received a copy of the GNU General Public License</span>
-<span class="s">    along with Janitoo. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="s2">    You should have received a copy of the GNU General Public License</span>
+<span class="s2">    along with Janitoo. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-<span class="s">&quot;&quot;&quot;</span>
-<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Sébastien GALLET aka bibi21000&#39;</span>
-<span class="n">__email__</span> <span class="o">=</span> <span class="s">&#39;bibi21000@gmail.com&#39;</span>
-<span class="n">__copyright__</span> <span class="o">=</span> <span class="s">&quot;Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi21000&quot;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Sébastien GALLET aka bibi21000&#39;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s1">&#39;bibi21000@gmail.com&#39;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi21000&quot;</span>
 
-<span class="c"># Set default logging handler to avoid &quot;No handler found&quot; warnings.</span>
+<span class="c1"># Set default logging handler to avoid &quot;No handler found&quot; warnings.</span>
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
-<span class="kn">from</span> <span class="nn">janitoo.bus</span> <span class="kn">import</span> <span class="n">JNTBus</span>
-<span class="kn">from</span> <span class="nn">janitoo.value</span> <span class="kn">import</span> <span class="n">JNTValue</span><span class="p">,</span> <span class="n">value_config_poll</span>
-<span class="kn">from</span> <span class="nn">janitoo.node</span> <span class="kn">import</span> <span class="n">JNTNode</span>
-<span class="kn">from</span> <span class="nn">janitoo.component</span> <span class="kn">import</span> <span class="n">JNTComponent</span>
+<span class="kn">from</span> <span class="nn">janitoo.bus</span> <span class="k">import</span> <span class="n">JNTBus</span>
+<span class="kn">from</span> <span class="nn">janitoo.value</span> <span class="k">import</span> <span class="n">JNTValue</span><span class="p">,</span> <span class="n">value_config_poll</span>
+<span class="kn">from</span> <span class="nn">janitoo.node</span> <span class="k">import</span> <span class="n">JNTNode</span>
+<span class="kn">from</span> <span class="nn">janitoo.component</span> <span class="k">import</span> <span class="n">JNTComponent</span>
 
-<span class="c">##############################################################</span>
-<span class="c">#Check that we are in sync with the official command classes</span>
-<span class="c">#Must be implemented for non-regression</span>
-<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="kn">import</span> <span class="n">COMMAND_DESC</span>
+<span class="c1">##############################################################</span>
+<span class="c1">#Check that we are in sync with the official command classes</span>
+<span class="c1">#Must be implemented for non-regression</span>
+<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="k">import</span> <span class="n">COMMAND_DESC</span>
 
 <span class="n">COMMAND_METER</span> <span class="o">=</span> <span class="mh">0x0032</span>
 <span class="n">COMMAND_CONFIGURATION</span> <span class="o">=</span> <span class="mh">0x0070</span>
 
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_METER</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_METER&#39;</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_CONFIGURATION</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_CONFIGURATION&#39;</span><span class="p">)</span>
-<span class="c">##############################################################</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_METER</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_METER&#39;</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_CONFIGURATION</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_CONFIGURATION&#39;</span><span class="p">)</span>
+<span class="c1">##############################################################</span>
 
-<span class="kn">from</span> <span class="nn">janitoo_events</span> <span class="kn">import</span> <span class="n">OID</span>
+<span class="kn">from</span> <span class="nn">janitoo_events</span> <span class="k">import</span> <span class="n">OID</span>
 
 <div class="viewcode-block" id="make_biocycle"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.make_biocycle">[docs]</a><span class="k">def</span> <span class="nf">make_biocycle</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">BiocycleComponent</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+    <span class="k">return</span> <span class="n">BiocycleComponent</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent">[docs]</a><span class="k">class</span> <span class="nc">BiocycleComponent</span><span class="p">(</span><span class="n">JNTComponent</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; A &#39;bio&#39; cyclecomponent&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.biocycle&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">)</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Bio cycle&quot;</span><span class="p">)</span>
-        <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&quot;Bio cycle simulator&quot;</span><span class="p">)</span>
-        <span class="n">JNTComponent</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">oid</span><span class="o">=</span><span class="n">oid</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="n">bus</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="n">addr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">hearbeat</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+        <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;oid&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.biocycle&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s2">&quot;Bio cycle&quot;</span><span class="p">)</span>
+        <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;product_name&#39;</span><span class="p">,</span> <span class="s2">&quot;Bio cycle simulator&quot;</span><span class="p">)</span>
+        <span class="n">JNTComponent</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">oid</span><span class="o">=</span><span class="n">oid</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="n">bus</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="n">addr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">hearbeat</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
                 <span class="n">product_name</span><span class="o">=</span><span class="n">product_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;[</span><span class="si">%s</span><span class="s">] - __init__ node uuid:</span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;cycle&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">%s</span><span class="s2">] - __init__ node uuid:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;cycle&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The number of days in the cycle&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Days&#39;</span><span class="p">,</span>
-            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;cycle&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The number of days in the cycle&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Days&#39;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;cycle&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
         <span class="p">)</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;current&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;current&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The current day in the cycle&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Day&#39;</span><span class="p">,</span>
-            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;current&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The current day in the cycle&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Day&#39;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;current&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span>
         <span class="p">)</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">poll_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poll_value</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;max&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;max&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The max minutes for the cycle in a day&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Max&#39;</span><span class="p">,</span>
-            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;max&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The max minutes for the cycle in a day&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Max&#39;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
         <span class="p">)</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;min&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;min&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The min minutes for the cycle in a day&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Min&#39;</span><span class="p">,</span>
-            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;min&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The min minutes for the cycle in a day&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Min&#39;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
         <span class="p">)</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;last_rotate&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_string&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;last_rotate&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_string&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The last date of rotation&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Last&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The last date of rotation&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Last&#39;</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">1800</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">poll_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poll_value</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;midi&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;config_string&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;midi&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;config_string&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The hour of the midi for the cycle&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Mid.&#39;</span><span class="p">,</span>
-            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;midi&#39;</span><span class="p">,</span> <span class="s">&#39;16:30&#39;</span><span class="p">),</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The hour of the midi for the cycle&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mid.&#39;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;midi&#39;</span><span class="p">,</span> <span class="s1">&#39;16:30&#39;</span><span class="p">),</span>
         <span class="p">)</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;duration&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;sensor_basic_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;duration&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;sensor_basic_integer&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The duration in minutes of the cycle for the current day&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Duration&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The duration in minutes of the cycle for the current day&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Duration&#39;</span><span class="p">,</span>
             <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">poll_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poll_value</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;factor_day&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;sensor_basic_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;factor_day&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;sensor_basic_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The factor for today. A value for -1 to 1&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Today&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The factor for today. A value for -1 to 1&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Today&#39;</span><span class="p">,</span>
             <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">factor_day</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">poll_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poll_value</span>
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;factor_now&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;sensor_basic_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;factor_now&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;sensor_basic_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The factor for now. A value for -1 to 1&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Now&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The factor for now. A value for -1 to 1&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Now&#39;</span><span class="p">,</span>
             <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">factor_now</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
@@ -255,25 +254,25 @@
 <div class="viewcode-block" id="BiocycleComponent.current_rotate"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.current_rotate">[docs]</a>    <span class="k">def</span> <span class="nf">current_rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Rotate the current day to go ahead in the cycle</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;last_rotate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">))</span>
-        <span class="n">nextd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
-        <span class="k">if</span> <span class="n">nextd</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;last_rotate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M:%S&#39;</span><span class="p">))</span>
+        <span class="n">nextd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">nextd</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">nextd</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">publish_poll</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mqttc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;current&#39;</span><span class="p">])</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">publish_poll</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mqttc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;last_rotate&#39;</span><span class="p">])</span>
-</div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">nextd</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">publish_poll</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mqttc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;current&#39;</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">publish_poll</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mqttc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;last_rotate&#39;</span><span class="p">])</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.check_heartbeat"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.check_heartbeat">[docs]</a>    <span class="k">def</span> <span class="nf">check_heartbeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Check that the component is &#39;available&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">True</span>
-</div>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.factor_day"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.factor_day">[docs]</a>    <span class="k">def</span> <span class="nf">factor_day</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the day factor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_cycle_factor</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span>
             <span class="k">if</span> <span class="n">data</span><span class="o">&lt;-</span><span class="mi">1</span><span class="p">:</span>
@@ -281,27 +280,27 @@
             <span class="k">elif</span> <span class="n">data</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="k">except</span> <span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;Exception when calculationg day factor&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">data</span>
-</div>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;Exception when calculationg day factor&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.start"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mqttc</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Start the component. Can be used to start a thread to acquire data.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">add_daily_job</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_rotate</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">JNTComponent</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mqttc</span><span class="p">)</span>
-</div>
+        <span class="k">return</span> <span class="n">JNTComponent</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mqttc</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.stop"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Stop the component.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bus</span><span class="o">.</span><span class="n">nodeman</span><span class="o">.</span><span class="n">remove_daily_job</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_rotate</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">JNTComponent</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-</div>
+        <span class="k">return</span> <span class="n">JNTComponent</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.factor_now"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.factor_now">[docs]</a>    <span class="k">def</span> <span class="nf">factor_now</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the instant factor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_hour_factor</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span>
             <span class="k">if</span> <span class="n">data</span><span class="o">&lt;-</span><span class="mi">1</span><span class="p">:</span>
@@ -309,19 +308,19 @@
             <span class="k">elif</span> <span class="n">data</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="k">except</span> <span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;Exception when calculationg now factor&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">data</span>
-</div>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;Exception when calculationg now factor&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.duration"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.duration">[docs]</a>    <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Return the cycle duration in the day</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_cycle_duration</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span>
         <span class="k">except</span> <span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;Exception when calculationg duration&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">data</span>
-</div>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;Exception when calculationg duration&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
     <span class="k">def</span> <span class="nf">_get_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">cycle</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Calculate the factor&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">current</span> <span class="o">-</span> <span class="p">(</span><span class="n">cycle</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">))</span> <span class="o">/</span> <span class="n">cycle</span>
@@ -329,20 +328,20 @@
 <div class="viewcode-block" id="BiocycleComponent.get_cycle_factor"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_cycle_factor">[docs]</a>    <span class="k">def</span> <span class="nf">get_cycle_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the factor related to day cycle</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_factor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span>
-</div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_factor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;current&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;cycle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span></div>
+
 <div class="viewcode-block" id="BiocycleComponent.get_cycle_duration"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_cycle_duration">[docs]</a>    <span class="k">def</span> <span class="nf">get_cycle_duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the duration in minutes of the cycle for today&quot;&quot;&quot;</span>
         <span class="n">dfact</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_cycle_factor</span><span class="p">())</span>
-        <span class="n">dlen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;min&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;min&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span> <span class="o">*</span> <span class="n">dfact</span>
-        <span class="k">return</span> <span class="n">dlen</span>
-</div>
-<div class="viewcode-block" id="BiocycleComponent.get_hour_factor"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_hour_factor">[docs]</a>    <span class="k">def</span> <span class="nf">get_hour_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nnow</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">dlen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">))</span> <span class="o">*</span> <span class="n">dfact</span>
+        <span class="k">return</span> <span class="n">dlen</span></div>
+
+<div class="viewcode-block" id="BiocycleComponent.get_hour_factor"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_hour_factor">[docs]</a>    <span class="k">def</span> <span class="nf">get_hour_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nnow</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the factor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">nnow</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nnow</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">nnow</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="n">hh</span><span class="p">,</span> <span class="n">mm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;midi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span>
+        <span class="n">hh</span><span class="p">,</span> <span class="n">mm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;midi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
         <span class="n">midd</span> <span class="o">=</span> <span class="n">nnow</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">hh</span><span class="p">),</span> <span class="n">minute</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">mm</span><span class="p">))</span>
         <span class="n">tdur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cycle_duration</span><span class="p">()</span>
         <span class="n">cdur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tdur</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
@@ -351,21 +350,21 @@
         <span class="k">if</span> <span class="n">nnow</span><span class="o">&lt;</span><span class="n">start</span> <span class="ow">or</span> <span class="n">nnow</span><span class="o">&gt;</span><span class="n">stop</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">0</span>
         <span class="n">elapsed</span> <span class="o">=</span> <span class="p">(</span><span class="n">nnow</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_factor</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">elapsed</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">tdur</span><span class="p">)))</span>
-</div>
-<div class="viewcode-block" id="BiocycleComponent.get_status"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_status">[docs]</a>    <span class="k">def</span> <span class="nf">get_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nnow</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_factor</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">elapsed</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">tdur</span><span class="p">)))</span></div>
+
+<div class="viewcode-block" id="BiocycleComponent.get_status"><a class="viewcode-back" href="../../api/index.html#janitoo_events.component.BiocycleComponent.get_status">[docs]</a>    <span class="k">def</span> <span class="nf">get_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nnow</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the current status</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">nnow</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nnow</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">nnow</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-        <span class="n">hh</span><span class="p">,</span> <span class="n">mm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;midi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span>
+        <span class="n">hh</span><span class="p">,</span> <span class="n">mm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;midi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_data_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
         <span class="n">midd</span> <span class="o">=</span> <span class="n">nnow</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">hh</span><span class="p">),</span> <span class="n">minute</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">mm</span><span class="p">))</span>
         <span class="n">cdur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_cycle_duration</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">start</span> <span class="o">=</span> <span class="n">midd</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">cdur</span><span class="p">)</span>
         <span class="n">stop</span> <span class="o">=</span> <span class="n">midd</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">cdur</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">nnow</span><span class="o">&lt;</span><span class="n">start</span> <span class="ow">or</span> <span class="n">nnow</span><span class="o">&gt;</span><span class="n">stop</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="bp">True</span></div></div>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div></div>
 </pre></div>
 
     </div>
@@ -380,7 +379,7 @@
     </p>
     <p>
         &copy; Copyright 2014,2015,2016 Sébastien GALLET aka bibi2100 &lt;bibi21000@gmail.com&gt;.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.<br/>
     </p>
   </div>
 </footer>
